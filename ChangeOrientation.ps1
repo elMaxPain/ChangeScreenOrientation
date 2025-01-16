@@ -100,17 +100,15 @@ namespace Resolution
                 switch(dm.dmDisplayOrientation)
                 {
                     case NativeMethods.DMDO_DEFAULT:
-                        //dm.dmDisplayOrientation = NativeMethods.DMDO_270;
-                        //2016-10-25/EBP wrap counter clockwise
-                        dm.dmDisplayOrientation = NativeMethods.DMDO_90;
-                        break;
-                    case NativeMethods.DMDO_270:
-                        dm.dmDisplayOrientation = NativeMethods.DMDO_180;
-                        break;
-                    case NativeMethods.DMDO_180:
                         dm.dmDisplayOrientation = NativeMethods.DMDO_90;
                         break;
                     case NativeMethods.DMDO_90:
+                        dm.dmDisplayOrientation = NativeMethods.DMDO_180;
+                        break;
+                    case NativeMethods.DMDO_180:
+                        dm.dmDisplayOrientation = NativeMethods.DMDO_270;
+                        break;
+                    case NativeMethods.DMDO_270:
                         dm.dmDisplayOrientation = NativeMethods.DMDO_DEFAULT;
                         break;
                     default:
